@@ -3,6 +3,11 @@ import { Router, Link } from "react-router-dom";
 import { history } from "../helpers/history";
 
 class Navbar extends React.Component {
+  logout = () => {
+    localStorage.clear("token");
+    this.setState({navigate: true});
+  }
+
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -27,11 +32,7 @@ class Navbar extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item float-right">
-            <Router history={history}>
-                <Link to={"/login"} className="nav-link">
-                  Logout
-                </Link>
-          </Router>
+            <a href="/login" onClick={this.logout}>Log out</a>
             </li>
           </ul>
         </div>

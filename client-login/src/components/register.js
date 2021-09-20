@@ -94,7 +94,7 @@ const Register = () => {
   };
 
   routeChange=()=> {
-    let path = `newPath`;
+    let path = `/chat`;
     let history = useHistory();
     history.push(path);
   }
