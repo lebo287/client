@@ -40,9 +40,9 @@ const App = () => {
   //   }
   // }, [currentUser]);
 
-  // const logOut = () => {
-  //   dispatch(logout());
-  // };
+  const logOut = () => {
+    dispatch(logout());
+  };
 
   return (
     <Router history={history}>

@@ -3,15 +3,28 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import './index.css';
-import App from './App';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./style.scss";
+import Navbar from './components/Navbar';
+import Chat from './components/chat/Chat';
 import reportWebVitals from './reportWebVitals';
 
+class App extends React.Component{
+  render(){
+    return(
+      <React.Fragment>
+        <Navbar />
+        <Chat />
+      </React.Fragment>
+    )
+  }
+}
+
 ReactDOM.render(
-  // <React.StrictMode>
     <Provider store={store}>
     <App />
     </Provider>
-  // </React.StrictMode>,
   ,document.getElementById('root')
 );
 

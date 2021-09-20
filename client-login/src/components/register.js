@@ -93,6 +93,12 @@ const Register = () => {
     }
   };
 
+  routeChange=()=> {
+    let path = `newPath`;
+    let history = useHistory();
+    history.push(path);
+  }
+
   return (
     <div className="col-md-12">
       <div className="card card-container">
@@ -142,7 +148,9 @@ const Register = () => {
               </div>
 
               <div className="form-group">
-                <button className="btn btn-primary btn-block">Sign Up</button>
+                <button className="btn btn-primary btn-block" onClick={this.routeChange}>
+                Sign Up
+                </button>
               </div>
             </div>
           )}
@@ -156,6 +164,7 @@ const Register = () => {
           )}
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
+        
       </div>
     </div>
   );

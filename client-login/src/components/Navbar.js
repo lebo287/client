@@ -1,12 +1,16 @@
 import React from "react";
+import { Router, Link } from "react-router-dom";
+import { history } from "../helpers/history";
 
 class Navbar extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <a className="navbar-brand" href="#">
-          ChatWizard
-        </a>
+        <Router history={history}>
+                <Link to={"/chat"} className="nav-link">
+                  Chat Wizard
+                </Link>
+          </Router>
 
         <button
           className="navbar-toggler"
@@ -23,9 +27,11 @@ class Navbar extends React.Component {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item float-right">
-              <a className="nav-link" target="_blank" href="">
-                link
-              </a>
+            <Router history={history}>
+                <Link to={"/login"} className="nav-link">
+                  Logout
+                </Link>
+          </Router>
             </li>
           </ul>
         </div>
