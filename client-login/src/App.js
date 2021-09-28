@@ -11,7 +11,7 @@ import Register from "./components/register";
 // import Home from "./components/home";
 import Profile from "./components/profile";
 import BoardUser from "./components/boardUser";
-import BoardModerator from "./components/boardModerator";
+import BasicCard from "./components/cards";
 import BoardAdmin from "./components/boardAdmin";
 import ChatRoom from "./components/chat/Chat";
 
@@ -51,7 +51,7 @@ const App = () => {
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
             <Route path="/user" component={BoardUser} />
-            <Route path="/mod" component={BoardModerator} />
+            <Route path="/cards" component={BasicCard} />
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
         </div>
